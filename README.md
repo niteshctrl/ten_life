@@ -33,7 +33,14 @@ python manage.py runserver
 
 6. Visit ```127.0.0.1:8000``` to view the App.
 
+## Homepage
+![image](https://github.com/user-attachments/assets/c3b9fa32-f322-4641-b3b2-632d11d36d09)
+
+
 ## Book Experiences around the World
+![image](https://github.com/user-attachments/assets/855dc18c-3947-4ab8-a37e-43593d85265c)
 
 
 ## Cancel a Booking
+![image](https://github.com/user-attachments/assets/8ad69f3b-59b4-4cb4-854f-37ba539e2258)
+

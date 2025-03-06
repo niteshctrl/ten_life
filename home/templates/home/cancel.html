@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancel</title>
+</head>
+<body>
+    <h1>We will wait to see you again soon</h1>
+
+    <form method="post" action="{% url 'cancel' %}">
+        {% csrf_token %}
+        <input type="number" name="member_id" placeholder="Enter Member ID" required>
+
+        {% if show_extra_field %}
+            <input type="number" name="booking_id" placeholder="Enter Booking ID">
+        {% endif %}
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="table">
+        {% for table in tables %}
+            {{ table|safe }}
+        {% endfor %}
+    </div>
+</body>
+</html>

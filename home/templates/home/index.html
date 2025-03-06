@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'home/css/index.css' %}">
+
     <title>HomePage</title>
 </head>
 <body>
-    <h1>Welcome to Ten Lifestyle</h1>
+
+    <div class="hero">
+        <div class="insiders">
+            <h1>Welcome to Ten Lifestyle</h1>
+            <h2>Your Journey of Luxury Starts Here</h2>
+            <button class="btn"><a href="/book">Book</a></button>
+            <button class="btn"><a href="/cancel">Cancel</a></button>
+        </div>
+        <video autoplay loop muted playsinline>
+            <source src="{% static 'home/images/hero.webm' %}" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
 </body>
 </html>

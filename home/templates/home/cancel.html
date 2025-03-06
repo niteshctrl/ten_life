@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'home/css/cancel.css' %}">
+
     <title>Cancel</title>
 </head>
 <body>
-    <h1>We will wait to see you again soon</h1>
+    <h1>We will wait to see you again</h1>
 
     <form method="post" action="{% url 'cancel' %}">
         {% csrf_token %}
         <input type="number" name="member_id" placeholder="Enter Member ID" required>
 
         {% if show_extra_field %}
-            <input type="number" name="booking_id" placeholder="Enter Booking ID">
+            <input type="number" name="booking_id" placeholder="Enter Booking ID" required>
         {% endif %}
 
-        <button type="submit">Submit</button>
+        <button class="btn" type="submit">Submit</button>
     </form>
 
     <div class="table">
@@ -24,5 +27,6 @@
             {{ table|safe }}
         {% endfor %}
     </div>
+    <a href="/" class="home-link">Home</a>
 </body>
 </html>

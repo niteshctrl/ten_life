@@ -15,18 +15,23 @@ git clone https://github.com/niteshctrl/ten_life.git
 python -m venv venv_ten
 ```
 
-3. Install the packages
+3. Activate the Virtual Environment
+```
+source venv_ten/bin/activate
+
+```
+4. Install the packages
 ```
 cd ten_life
 pip install requirements.txt
 ```
 
-4. Run the Django App
+5. Run the Django App
 ```
 python manage.py runserver
 ```
 
-5. Visit ```127.0.0.1:8000``` to view the App.
+6. Visit ```127.0.0.1:8000``` to view the App.
 
 ## Book Experiences around the World
 
